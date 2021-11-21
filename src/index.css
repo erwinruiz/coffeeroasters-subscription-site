@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap");
+
+:root {
+  --dark-cyan: #0e8784;
+  --dark-grey-blue: #333d4b;
+  --pale-orange: #fdd6ba;
+  --light-cream-bg: #fefcf7;
+  --grey: #83888f;
+  /* buttons */
+  --main-button: var(--dark-cyan);
+  --main-button-hover: #66d2cf;
+  --main-button-disabled: #e2dedb;
+  /* options */
+  --big-selection-option-default: #f4f1eb;
+  --big-selection-option-hover: var(--pale-orange);
+  --big-selection-option-active: var(--dark-cyan);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1REM = 10px */
+}
+*,
+*:before,
+s *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: var(--dark-grey-blue);
+}
+/* Globals */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: var(--dark-grey-blue);
+}
+h1 {
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+}
+h2 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+h3 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+h4 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
