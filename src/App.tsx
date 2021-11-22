@@ -1,5 +1,12 @@
+import { Fragment } from "react";
+import Header from "./Components/Header";
+
 function App() {
-  return <h1>Coffeeroasters</h1>;
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 }
 
 export default App;

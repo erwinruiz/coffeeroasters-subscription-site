@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 2.4rem 4rem;
+}
+.logo {
+  width: 16.3rem;
+  height: 1.8rem;
+}
+.icon-hamburger:hover {
+  cursor: pointer;
+}
+.icon-hamburger:hover path {
+    fill: var(--grey);
+}
