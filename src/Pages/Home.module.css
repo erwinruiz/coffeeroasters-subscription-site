@@ -1,0 +1,33 @@
+.home {
+  position: relative;
+}
+.hero {
+  width: 100%;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 1;
+}
+.text-content {
+  position: relative;
+  z-index: 5;
+  padding: 10rem 2.4rem 21.9rem;
+  text-align: center;
+}
+.text-content h1 {
+  color: var(--light-cream-bg);
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 2.4rem;
+}
+.text-content p {
+  color: var(--light-cream-bg);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  opacity: 0.8;
+  margin-bottom: 3.9rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12rem;
+}

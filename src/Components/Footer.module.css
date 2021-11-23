@@ -1,0 +1,46 @@
+.footer {
+  background-color: #2c343e;
+  margin: 0 2.4rem 7.2rem;
+  padding: 5.5rem;
+}
+.logo {
+  width: 21.7rem;
+  height: 2.4rem;
+  display: block;
+  margin: 0 auto 5rem;
+}
+.footer nav {
+  margin-bottom: 4.8rem;
+}
+.footer nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.footer nav ul li {
+  list-style: none;
+  line-height: 0;
+  margin-bottom: 2.4rem;
+}
+.footer nav ul li a {
+  text-decoration: none;
+  color: var(--grey);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.footer nav ul li a:hover {
+  text-decoration: underline;
+}
+.media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2.4rem;
+}
+.media-icons svg:hover {
+  cursor: pointer;
+}
+.media-icons svg:hover path {
+  fill: var(--grey);
+}

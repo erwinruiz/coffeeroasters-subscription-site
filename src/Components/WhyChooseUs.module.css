@@ -1,0 +1,63 @@
+.container {
+  padding: 6.4rem 2.4rem 0;
+  position: relative;
+}
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 58%;
+  border-radius: 1rem;
+  background-color: #2c343e;
+}
+.mask img {
+    margin-top: 26.9rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.text-content {
+  position: relative;
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+.text-content h2 {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  color: var(--light-cream-bg);
+  margin-bottom: 2.4rem;
+}
+.text-content p {
+  color: var(--light-cream-bg);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.features-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  position: relative;
+}
+.feature {
+  background-color: var(--dark-cyan);
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 7.2rem 3.35rem 5.1rem;
+}
+.feature svg {
+  margin-bottom: 5.6rem;
+  width: 7.2rem;
+  height: 7.2rem;
+}
+.feature h3 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.4rem;
+  color: var(--light-cream-bg);
+}
+.feature p {
+  color: var(--light-cream-bg);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
