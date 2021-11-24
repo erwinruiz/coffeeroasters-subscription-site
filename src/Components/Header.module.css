@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 2.4rem 2.4rem 4rem;
+  z-index: 15;
+  position: relative;
+  user-select: none;
 }
 .logo {
   width: 16.3rem;
@@ -11,9 +14,11 @@
 .logo:hover {
   cursor: pointer;
 }
-.icon-hamburger:hover {
+.icon-hamburger:hover,
+.icon-close {
   cursor: pointer;
 }
-.icon-hamburger:hover path {
-    fill: var(--grey);
+.icon-hamburger:hover path,
+.icon-close:hover path {
+  fill: var(--grey);
 }

@@ -1,0 +1,31 @@
+.nav {
+  position: absolute;
+  z-index: 10;
+  padding: 4rem 8.2rem 0;
+  width: 100vw;
+  height: 78vh;
+  user-select: none;
+  background: linear-gradient(
+    180deg,
+    var(--light-cream-bg) 38%,
+    rgba(254, 252, 247, 0.504981) 100%
+  );
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+}
+.nav ul li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: var(--dark-grey-blue);
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+.nav ul li a:hover {
+  text-decoration: underline;
+}
