@@ -1,0 +1,23 @@
+.container h2 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--grey);
+  text-align: center;
+  margin-bottom: 7.2rem;
+}
+.headquarters-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8rem;
+}
+.headquarter {
+  text-align: center;
+}
+.headquarter img {
+  margin-bottom: 4.7rem;
+}
+.headquarter h3 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  margin-bottom: 2.2rem;
+}

@@ -1,4 +1,5 @@
 import classes from "./Footer.module.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,13 +12,13 @@ function Footer() {
       <nav>
         <ul>
           <li>
-            <a href="/">HOME</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/">ABOUT US</a>
+            <Link to="/about-us">About us</Link>
           </li>
           <li>
-            <a href="/">Create your plan</a>
+            <Link to="/create-your-plan">Create your plan</Link>
           </li>
         </ul>
       </nav>

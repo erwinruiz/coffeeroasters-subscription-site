@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import AboutUs from "./Pages/AboutUs";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 
 function App() {
@@ -8,7 +10,10 @@ function App() {
     <Fragment>
       <Header />
       <main className="container">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
       </main>
       <Footer />
     </Fragment>
