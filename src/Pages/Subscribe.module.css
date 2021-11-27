@@ -1,4 +1,6 @@
-.home {
+/* .container {
+} */
+.first-subcontainer {
   padding: 0 2.4rem;
 }
 .hero-container {
@@ -13,24 +15,18 @@
 .text-content {
   position: relative;
   z-index: 5;
-  padding: 10rem 2.4rem 21.9rem;
+  padding: 10.1rem 2.4rem 0;
   text-align: center;
+  margin-bottom: 25.6rem;
 }
-.text-content h1 {
+.text-content h2 {
   color: var(--light-cream-bg);
   font-size: 4rem;
   line-height: 4rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.2rem;
 }
 .text-content p {
   color: var(--light-cream-bg);
   font-size: 1.5rem;
   line-height: 2.5rem;
-  opacity: 0.8;
-  margin-bottom: 3.9rem;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12rem;
 }

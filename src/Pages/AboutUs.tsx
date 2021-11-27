@@ -3,12 +3,14 @@ import classes from "./AboutUs.module.css";
 
 function AboutUs() {
   return (
-    <div className={classes.container}>
-      <img
-        className={classes.hero}
-        src="./assets/about/mobile/image-hero-whitecup.jpg"
-        alt="whitecup"
-      />
+    <section className={classes.container}>
+      <div className={classes["hero-container"]}>
+        <img
+          className={classes.hero}
+          src="./assets/about/mobile/image-hero-whitecup.jpg"
+          alt="whitecup"
+        />
+      </div>
       <div className={classes["text-content"]}>
         <h1>About Us</h1>
         <p>
@@ -51,7 +53,7 @@ function AboutUs() {
         </p>
       </div>
       <OurHeadquarters />
-    </div>
+    </section>
   );
 }
 

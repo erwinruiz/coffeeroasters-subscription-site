@@ -2,12 +2,18 @@ import classes from "./Header.module.css";
 import { useState, Fragment } from "react";
 import MobileMenu from "./UI/MobileMenu";
 import Backdrop from "./UI/Backdrop";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  let navigate = useNavigate();
 
   const menuHandler = () => {
     setMobileMenuIsOpen((state) => !state);
+  };
+
+  const logoHandler = () => {
+    navigate("/");
   };
 
   return (
@@ -17,6 +23,7 @@ function Header() {
           src="./assets/shared/desktop/logo.svg"
           alt="logo"
           className={classes.logo}
+          onClick={logoHandler}
         />
         {!mobileMenuIsOpen && (
           <svg
@@ -49,7 +56,7 @@ function Header() {
           </svg>
         )}
       </header>
-      {mobileMenuIsOpen && <MobileMenu />}
+      {mobileMenuIsOpen && <MobileMenu closeMenu={menuHandler} />}
       {mobileMenuIsOpen && <Backdrop onClick={menuHandler} />}
     </Fragment>
   );

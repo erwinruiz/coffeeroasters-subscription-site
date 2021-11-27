@@ -34,3 +34,13 @@
 .button-container {
   text-align: center;
 }
+.dark-color {
+  background-color: #2c343e;
+  border-radius: 1rem;
+  padding: 8rem 2.4rem;
+  margin-bottom: 12rem;
+}
+.dark-color .title,
+.dark-color .description {
+  color: #ffffff;
+}

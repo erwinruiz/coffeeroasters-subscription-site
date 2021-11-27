@@ -6,12 +6,14 @@ import classes from "./Home.module.css";
 
 function Home() {
   return (
-    <div className={classes.home}>
-      <img
-        className={classes.hero}
-        src="./assets/home/mobile/image-hero-coffeepress.jpg"
-        alt="coffeepress"
-      />
+    <section className={classes.home}>
+      <div className={classes['hero-container']}>
+        <img
+          className={classes.hero}
+          src="./assets/home/mobile/image-hero-coffeepress.jpg"
+          alt="coffeepress"
+        />
+      </div>
       <div className={classes["text-content"]}>
         <h1>Great coffee made simple.</h1>
         <p>
@@ -24,9 +26,9 @@ function Home() {
       <div className={classes.content}>
         <Collection />
         <WhyChooseUs />
-        <HowItWorks />
+        <HowItWorks title button darkColor={false} />
       </div>
-    </div>
+    </section>
   );
 }
 

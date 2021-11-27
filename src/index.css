@@ -64,7 +64,7 @@ h4 {
   line-height: 3.2rem;
 }
 .container {
-  padding: 0 2.4rem;
+  /* padding: 0 2.4rem; */
   margin-bottom: 12rem;
   min-height: 100vh;
   min-width: 100vw;

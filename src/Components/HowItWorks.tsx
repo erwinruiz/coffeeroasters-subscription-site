@@ -2,11 +2,21 @@ import classes from "./HowItWorks.module.css";
 import steps from "../db/steps";
 import Button from "./UI/Button";
 
-function HowItWorks() {
+type HowItWorksProps = {
+  title: boolean;
+  button: boolean;
+  darkColor: boolean;
+};
+
+function HowItWorks({ title, button, darkColor }: HowItWorksProps) {
   return (
     <section className={classes.container}>
-      <h2>How it works</h2>
-      <div className={classes["steps-container"]}>
+      {title && <h2>How it works</h2>}
+      <div
+        className={`${classes["steps-container"]} ${
+          darkColor ? classes["dark-color"] : ""
+        }`}
+      >
         {steps.map((step, i) => {
           const { number, title, description } = step;
 
@@ -19,9 +29,11 @@ function HowItWorks() {
           );
         })}
       </div>
-      <div className={classes["button-container"]}>
-        <Button text="Create your plan" />
-      </div>
+      {button && (
+        <div className={classes["button-container"]}>
+          <Button text="Create your plan" />
+        </div>
+      )}
     </section>
   );
 }

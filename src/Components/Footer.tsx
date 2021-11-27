@@ -18,7 +18,7 @@ function Footer() {
             <Link to="/about-us">About us</Link>
           </li>
           <li>
-            <Link to="/create-your-plan">Create your plan</Link>
+            <Link to="/subscribe">Create your plan</Link>
           </li>
         </ul>
       </nav>
