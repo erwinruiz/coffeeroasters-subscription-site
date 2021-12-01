@@ -10,7 +10,11 @@
   line-height: 2.5rem;
   font-weight: 900;
 }
-.button:hover {
+.button:hover:not(.disabled) {
   cursor: pointer;
   background-color: var(--main-button-hover);
+}
+.disabled {
+  background-color: var(--main-button-disabled);
+  pointer-events: none;
 }

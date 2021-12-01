@@ -4,7 +4,7 @@
 .questions-container {
   display: flex;
   flex-direction: column;
-  row-gap: 11rem;
+  row-gap: 9.6rem;
   margin-bottom: 12.1rem;
 }
 .question-header {
@@ -14,6 +14,9 @@
   column-gap: 7.5rem;
   margin-bottom: 1.8rem;
 }
+.question-header:hover {
+  cursor: pointer;
+}
 .question-header h2 {
   font-size: 2.4rem;
   line-height: 2.8rem;
@@ -21,7 +24,6 @@
 }
 .question-header .arrow {
   width: 3rem;
-  transform: rotate(180deg);
 }
 .answers-container {
   display: flex;
@@ -65,4 +67,18 @@
 }
 .button-container {
   text-align: center;
+}
+/* Question open */
+.question-open .arrow {
+  transform: rotate(180deg);
+}
+.selected-answer {
+  background-color: var(--big-selection-option-active);
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  .question-open .answer:hover {
+    cursor: pointer;
+    background-color: var(--big-selection-option-hover);
+  }
 }

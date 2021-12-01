@@ -1,17 +1,83 @@
 import classes from "./Form.module.css";
 import questions from "../db/form-questions";
 import Button from "./UI/Button";
+import { useState } from "react";
+
+const questionsInitialState = {
+  1: true,
+  2: false,
+  3: false,
+  4: false,
+  5: false,
+};
+
+const answersInitialState = {
+  1: null,
+  2: null,
+  3: null,
+  4: null,
+  5: null,
+};
+
+const summaryInitialState = {
+  1: null,
+  2: null,
+  3: null,
+  4: null,
+  5: null,
+};
+
+let isFormComplete = false;
 
 function Form() {
+  const [isQuestionOpen, setIsQuestionOpen] = useState<any>(
+    questionsInitialState
+  );
+  const [isAnswerOpen, setIsAnswerOpen] = useState<any>(answersInitialState);
+  const [summary, setSummary] = useState<any>(summaryInitialState);
+
+  const questionHandler = (questionId: number) => {
+    setIsQuestionOpen({
+      ...isQuestionOpen,
+      [questionId]: !isQuestionOpen[questionId],
+    });
+  };
+
+  isFormComplete = Object.values(summary).every((value) => value !== null);
+
+  const answerHandler = (
+    questionId: number,
+    answerId: number,
+    title: string
+  ) => {
+    setIsAnswerOpen({
+      ...isAnswerOpen,
+      [questionId]: answerId === isAnswerOpen[questionId] ? null : answerId,
+    });
+    setSummary({
+      ...summary,
+      [questionId]: title === summary[questionId] ? null : title,
+    });
+  };
+
   return (
     <form className={classes.form}>
       <div className={classes["questions-container"]}>
-        {questions.map((question, i) => {
-          const { title, options } = question;
+        {questions.map((question) => {
+          const { title, options, id: questionId } = question;
+          const isOpen = isQuestionOpen[questionId];
 
           return (
-            <div key={i} className={classes.question}>
-              <div className={classes["question-header"]}>
+            <div
+              key={questionId}
+              className={`${classes.question} ${
+                isOpen ? classes["question-open"] : ""
+              }`}
+            >
+              <div
+                onClick={() => questionHandler(questionId)}
+                className={classes["question-header"]}
+              >
                 <h2>{title}</h2>
                 <svg
                   className={classes.arrow}
@@ -26,17 +92,27 @@ function Form() {
                   />
                 </svg>
               </div>
-              <div className={classes["answers-container"]}>
-                {options.map((answer, i) => {
-                  const { title, description } = answer;
-                  return (
-                    <div key={i} className={classes.answer}>
-                      <h3>{title}</h3>
-                      <p>{description}</p>
-                    </div>
-                  );
-                })}
-              </div>
+              {isQuestionOpen[questionId] && (
+                <div className={classes["answers-container"]}>
+                  {options.map((answer) => {
+                    const { title, description, id } = answer;
+                    return (
+                      <div
+                        key={id}
+                        className={`${classes.answer} ${
+                          isAnswerOpen[questionId] === id
+                            ? classes["selected-answer"]
+                            : ""
+                        }`}
+                        onClick={() => answerHandler(questionId, id, title)}
+                      >
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           );
         })}
@@ -44,13 +120,15 @@ function Form() {
       <div className={classes["order-summary"]}>
         <p className={classes.title}>Order Summary</p>
         <p className={classes.description}>
-          “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span>{" "}
-          type of bean. <span>250g</span> ground ala <span>Cafetiére</span>,
-          sent to me <span>Every Week</span>.”
+          “I drink my coffee as <span>{summary[1] || "_____"}</span>, with a{" "}
+          <span>{summary[2] || "_____"}</span> type of bean.{" "}
+          <span>{summary[3] || "_____"}</span> ground ala{" "}
+          <span>{summary[4] || "_____"}</span>, sent to me{" "}
+          <span>{summary[5] || "_____"}</span>.”
         </p>
       </div>
       <div className={classes["button-container"]}>
-        <Button text="Create my plan!" />
+        <Button text="Create my plan!" disabled={!isFormComplete} />
       </div>
     </form>
   );
