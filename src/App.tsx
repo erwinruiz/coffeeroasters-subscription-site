@@ -5,10 +5,12 @@ import AboutUs from "./Pages/AboutUs";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Subscribe from "./Pages/Subscribe";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <Fragment>
+      <ScrollToTop />
       <Header />
       <main className="container">
         <Routes>

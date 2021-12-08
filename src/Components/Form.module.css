@@ -61,6 +61,7 @@
   line-height: 4rem;
   color: #ffffff;
   font-weight: 900;
+  font-family: "Fraunces", serif;
 }
 .order-summary span {
   color: var(--dark-cyan);

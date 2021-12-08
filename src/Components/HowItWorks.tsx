@@ -1,6 +1,7 @@
 import classes from "./HowItWorks.module.css";
 import steps from "../db/steps";
 import Button from "./UI/Button";
+import { useNavigate } from "react-router-dom";
 
 type HowItWorksProps = {
   title: boolean;
@@ -9,6 +10,12 @@ type HowItWorksProps = {
 };
 
 function HowItWorks({ title, button, darkColor }: HowItWorksProps) {
+  const navigate = useNavigate();
+
+  const createPlanHandler = () => {
+    navigate("/subscribe");
+  };
+
   return (
     <section className={classes.container}>
       {title && <h2>How it works</h2>}
@@ -30,7 +37,10 @@ function HowItWorks({ title, button, darkColor }: HowItWorksProps) {
         })}
       </div>
       {button && (
-        <div className={classes["button-container"]}>
+        <div
+          className={classes["button-container"]}
+          onClick={createPlanHandler}
+        >
           <Button text="Create your plan" />
         </div>
       )}

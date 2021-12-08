@@ -3,11 +3,18 @@ import HowItWorks from "../Components/HowItWorks";
 import Button from "../Components/UI/Button";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import classes from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
+  const createPlanHandler = () => {
+    navigate("/subscribe");
+  };
+
   return (
     <section className={classes.home}>
-      <div className={classes['hero-container']}>
+      <div className={classes["hero-container"]}>
         <img
           className={classes.hero}
           src="./assets/home/mobile/image-hero-coffeepress.jpg"
@@ -21,7 +28,12 @@ function Home() {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <Button text="Create your plan" />
+        <div
+          className={classes["button-container"]}
+          onClick={createPlanHandler}
+        >
+          <Button text="Create your plan" />
+        </div>
       </div>
       <div className={classes.content}>
         <Collection />
