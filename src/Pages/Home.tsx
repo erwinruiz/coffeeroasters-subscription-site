@@ -16,8 +16,13 @@ function Home() {
     <section className={classes.home}>
       <div className={classes["hero-container"]}>
         <img
-          className={classes.hero}
+          className={`${classes.hero} ${classes["hero-mobile"]}`}
           src="./assets/home/mobile/image-hero-coffeepress.jpg"
+          alt="coffeepress"
+        />
+        <img
+          className={`${classes.hero} ${classes["hero-tablet"]}`}
+          src="./assets/home/tablet/image-hero-coffeepress.jpg"
           alt="coffeepress"
         />
       </div>

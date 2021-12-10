@@ -55,6 +55,20 @@ function Header() {
             />
           </svg>
         )}
+        {/* nav menu */}
+        <nav>
+          <ul>
+            <li>
+              <a href="/">HOME</a>
+            </li>
+            <li>
+              <a href="/about-us">ABOUT US</a>
+            </li>
+            <li>
+              <a href="/subscribe">Create your plan</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       {mobileMenuIsOpen && <MobileMenu closeMenu={menuHandler} />}
       {mobileMenuIsOpen && <Backdrop onClick={menuHandler} />}

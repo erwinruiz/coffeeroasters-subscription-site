@@ -19,6 +19,13 @@ function HowItWorks({ title, button, darkColor }: HowItWorksProps) {
   return (
     <section className={classes.container}>
       {title && <h2>How it works</h2>}
+      <div className={classes.figure}>
+        <div className={classes.circule}></div>
+        <div className={classes.line}></div>
+        <div className={classes.circule}></div>
+        <div className={classes.line}></div>
+        <div className={classes.circule}></div>
+      </div>
       <div
         className={`${classes["steps-container"]} ${
           darkColor ? classes["dark-color"] : ""

@@ -44,3 +44,43 @@
 .dark-color .description {
   color: #ffffff;
 }
+.figure {
+  display: none;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container h2 {
+    text-align: left;
+    margin-bottom: 4rem;
+  }
+  .steps-container {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 3.3rem;
+    margin-bottom: 4.4rem;
+  }
+  .step {
+    text-align: left;
+    flex: 1;
+  }
+  .figure {
+    display: flex;
+    align-items: center;
+    width: 51rem;
+    margin-bottom: 4.8rem;
+  }
+  .figure .circule {
+    border: 0.2rem solid var(--dark-cyan);
+    height: 3.1rem;
+    width: 3.1rem;
+    border-radius: 50%;
+  }
+  .figure .line {
+    border: 0.1rem solid var(--pale-orange);
+    width: 41%;
+  }
+  .button-container {
+    text-align: left;
+  }
+}

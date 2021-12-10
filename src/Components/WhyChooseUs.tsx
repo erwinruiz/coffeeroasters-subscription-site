@@ -5,7 +5,8 @@ function WhyChooseUs() {
   return (
     <section className={classes.container}>
       <div className={classes.mask}>
-        <img src="./assets/about/mobile/bg-quality.png" alt="" />
+        <img className={classes['bg-mobile']} src="./assets/about/mobile/bg-quality.png" alt="" />
+        <img className={classes['bg-tablet']} src="./assets/about/tablet/bg-quality.png" alt="" />
       </div>
       <div className={classes["text-content"]}>
         <h2>Why choose us?</h2>
@@ -21,8 +22,10 @@ function WhyChooseUs() {
           return (
             <div key={id} className={classes.feature}>
               {image}
-              <h3>{title}</h3>
-              <p>{description}</p>
+              <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
             </div>
           );
         })}

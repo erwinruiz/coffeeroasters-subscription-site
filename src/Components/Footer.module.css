@@ -44,3 +44,24 @@
 .media-icons svg:hover path {
   fill: var(--grey);
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .logo {
+    width: 23.6rem;
+    height: 2.6rem;
+    margin-bottom: 3.2rem;
+  }
+  .footer nav {
+    margin-bottom: 6.5rem;
+  }
+  .footer nav ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 3.3rem;
+  }
+  .footer nav ul li a {
+    font-weight: 700;
+    letter-spacing: 0.092rem;
+  }
+}

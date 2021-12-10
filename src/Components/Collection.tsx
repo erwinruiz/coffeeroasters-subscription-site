@@ -14,8 +14,10 @@ function Collection() {
           return (
             <div key={id} className={classes.product}>
               <img src={image} alt={title} />
-              <h3>{title}</h3>
-              <p>{description}</p>
+              <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
             </div>
           );
         })}

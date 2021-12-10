@@ -22,3 +22,39 @@
 .icon-close:hover path {
   fill: var(--grey);
 }
+.header nav {
+  display: none;
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .icon-hamburger {
+    display: none;
+  }
+  .header {
+    padding: 2.4rem 4rem 4rem;
+  }
+  .header nav {
+    display: initial;
+  }
+  .header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 3.2rem;
+  }
+  .header nav ul li {
+    list-style: none;
+  }
+  .header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--grey);
+    letter-spacing: 0.092rem;
+    font-weight: 700;
+  }
+  .header nav ul li a:hover {
+    color: var(--dark-grey-blue);
+  }
+}

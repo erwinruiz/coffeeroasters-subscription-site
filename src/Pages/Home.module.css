@@ -38,3 +38,26 @@
   width: 21.7rem;
   margin: 0 auto;
 }
+
+@media (min-width: 768px) {
+  .home {
+    padding: 0 4rem;
+  }
+  .hero-mobile {
+    display: none;
+  }
+  .text-content {
+    padding: 10.4rem 23.3rem 24.8rem 5.8rem;
+    text-align: left;
+  }
+  .text-content h1 {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+  .button-container {
+    margin: initial;
+  }
+  .content {
+    row-gap: 14.4rem;
+  }
+}
