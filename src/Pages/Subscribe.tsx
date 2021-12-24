@@ -8,8 +8,13 @@ function Subscribe() {
       <div className={classes["first-subcontainer"]}>
         <div className={classes["hero-container"]}>
           <img
-            className={classes.hero}
+            className={`${classes.hero} ${classes["hero-mobile"]}`}
             src="./assets/plan/mobile/image-hero-blackcup.jpg"
+            alt="blackcup"
+          />
+          <img
+            className={`${classes.hero} ${classes["hero-tablet"]}`}
+            src="./assets/plan/tablet/image-hero-blackcup.jpg"
             alt="blackcup"
           />
         </div>

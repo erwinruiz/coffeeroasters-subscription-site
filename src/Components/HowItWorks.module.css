@@ -83,4 +83,14 @@
   .button-container {
     text-align: left;
   }
+  /* Dark - Subscribe Page */
+  .dark-container {
+    background-color: #2c343e;
+    border-radius: 1rem;
+    padding: 9.7rem 4rem 7rem;
+    margin-bottom: 14.4rem;
+  }
+  .dark-container .steps-container {
+    padding: 0;
+  }
 }
