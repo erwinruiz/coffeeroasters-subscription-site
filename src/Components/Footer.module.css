@@ -47,6 +47,9 @@
 
 /* Tablet */
 @media (min-width: 768px) {
+  .footer {
+    margin: 0 4rem 7.2rem;
+  }
   .logo {
     width: 23.6rem;
     height: 2.6rem;

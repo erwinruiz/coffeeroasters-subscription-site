@@ -6,8 +6,13 @@ function AboutUs() {
     <section className={classes.container}>
       <div className={classes["hero-container"]}>
         <img
-          className={classes.hero}
+          className={`${classes.hero} ${classes["hero-mobile"]}`}
           src="./assets/about/mobile/image-hero-whitecup.jpg"
+          alt="whitecup"
+        />
+        <img
+          className={`${classes.hero} ${classes["hero-tablet"]}`}
+          src="./assets/about/tablet/image-hero-whitecup.jpg"
           alt="whitecup"
         />
       </div>
@@ -22,26 +27,35 @@ function AboutUs() {
       </div>
       <div className={classes.commitment}>
         <img
+          className={classes.mobile}
           src="./assets/about/mobile/image-commitment.jpg"
           alt="commitment"
         />
-        <h2>Our commitment</h2>
-        <p>
-          We’re built on a simple mission and a commitment to doing good along
-          the way. We want to make it easy for you to discover and brew the
-          world’s best coffee at home. It all starts at the source. To locate
-          the specific lots we want to purchase, we travel nearly 60 days a year
-          trying to understand the challenges and opportunities in each of these
-          places. We collaborate with exceptional coffee growers and empower a
-          global community of farmers through with well above fair-trade
-          benchmarks. We also offer training, support farm community
-          initiatives, and invest in coffee plant science. Curating only the
-          finest blends, we roast each lot to highlight tasting profiles
-          distinctive to their native growing region.
-        </p>
+        <img
+          className={classes.tablet}
+          src="./assets/about/tablet/image-commitment.jpg"
+          alt="commitment"
+        />
+        <div>
+          <h2>Our commitment</h2>
+          <p>
+            We’re built on a simple mission and a commitment to doing good along
+            the way. We want to make it easy for you to discover and brew the
+            world’s best coffee at home. It all starts at the source. To locate
+            the specific lots we want to purchase, we travel nearly 60 days a
+            year trying to understand the challenges and opportunities in each
+            of these places. We collaborate with exceptional coffee growers and
+            empower a global community of farmers through with well above
+            fair-trade benchmarks. We also offer training, support farm
+            community initiatives, and invest in coffee plant science. Curating
+            only the finest blends, we roast each lot to highlight tasting
+            profiles distinctive to their native growing region.
+          </p>
+        </div>
       </div>
       <div className={classes["uncompromising-quality"]}>
-        <img src="./assets/about/mobile/image-quality.jpg" alt="commitment" />
+        <img className={classes.mobile} src="./assets/about/mobile/image-quality.jpg" alt="commitment" />
+        <img className={classes.tablet} src="./assets/about/tablet/image-quality.jpg" alt="commitment" />
         <h3>Uncompromising quality</h3>
         <p>
           Although we work with growers who pay close attention to all stages of

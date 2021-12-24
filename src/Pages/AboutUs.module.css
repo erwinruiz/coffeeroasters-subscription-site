@@ -10,6 +10,9 @@
   position: absolute;
   z-index: 1;
 }
+.hero-tablet {
+  display: none;
+}
 .text-content {
   position: relative;
   z-index: 5;
@@ -37,6 +40,9 @@
   border-radius: 0.8rem;
   margin-bottom: 4.8rem;
 }
+.commitment .tablet {
+  display: none;
+}
 .commitment h2 {
   font-size: 3.2rem;
   line-height: 4.8rem;
@@ -61,6 +67,9 @@
   margin-top: -7.8rem;
   margin-bottom: 6.4rem;
 }
+.uncompromising-quality .tablet {
+  display: none;
+}
 .uncompromising-quality h3 {
   font-size: 2.8rem;
   line-height: 2.8rem;
@@ -73,4 +82,67 @@
   opacity: 0.8;
   font-size: 1.5rem;
   line-height: 2.5rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 4rem;
+  }
+  .hero-mobile {
+    display: none;
+  }
+  .hero-tablet {
+    display: initial;
+  }
+  .text-content {
+    text-align: left;
+    padding: 11.8rem 24rem 0 5.8rem;
+    margin-bottom: 26.2rem;
+  }
+  .text-content h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .commitment .mobile {
+    display: none;
+  }
+  .commitment .tablet {
+    display: initial;
+  }
+  .commitment img {
+    margin-bottom: 0;
+  }
+  .commitment {
+    display: flex;
+    column-gap: 6.9rem;
+    margin-bottom: 30.4rem;
+  }
+  .commitment h2 {
+    text-align: left;
+    margin-top: 0.8rem;
+  }
+  .commitment p {
+    text-align: left;
+  }
+  .uncompromising-quality {
+    padding: 0 5.8rem 6.7rem;
+    margin-bottom: 14.4rem;
+  }
+  .uncompromising-quality .mobile {
+    display: none;
+  }
+  .uncompromising-quality .tablet {
+    display: initial;
+  }
+  .uncompromising-quality img {
+    margin-top: -16rem;
+  }
+  .uncompromising-quality h3 {
+    font-size: 3.3rem;
+    line-height: 4.8rem;
+  }
+  .uncompromising-quality p {
+    padding: 0 1.7rem;
+  }
 }
