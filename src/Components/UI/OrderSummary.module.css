@@ -53,3 +53,25 @@
   cursor: pointer;
   background-color: var(--main-button-hover);
 }
+
+@media (min-width: 768px) {
+  .container {
+    width: 54rem;
+    margin: 21.4rem calc(50% - 26rem);
+    padding: 0 0 5.6rem;
+  }
+  .title-container {
+    padding: 4.8rem 0 4rem 5.6rem;
+  }
+  .title-container h2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  .text-container {
+    padding: 5.7rem 5.6rem 0;
+    margin-bottom: 4.7rem;
+  }
+  .text-order-summary {
+    margin-bottom: 0.7rem;
+  }
+}
