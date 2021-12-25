@@ -77,7 +77,10 @@
     padding: 5.6rem 5.7rem 0;
   }
   .mask {
-    bottom: 64%;
+    bottom: 40%;
+  }
+  .mask img {
+    display: none;
   }
   .text-content {
     margin-bottom: 7rem;
@@ -100,5 +103,44 @@
     margin-bottom: 0;
     width: 12rem;
     height: 7.6rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 10rem 8.5rem 0;
+    position: relative;
+  }
+  .text-content h2 {
+    font-size: 4rem;
+  }
+  .text-content p {
+    padding: 0 11.5rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mask {
+    bottom: 22%;
+  }
+  .text-content p {
+    padding: 0 28.4rem;
+  }
+  .features-container {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .feature {
+    flex-direction: column;
+    row-gap: 5.6rem;
+    text-align: center;
+    padding: 4.7rem 4.8rem 4.8rem;
+    flex: 1;
+  }
+  .feature svg {
+    width: 7.2rem;
   }
 }

@@ -43,9 +43,13 @@
   line-height: 2.5rem;
 }
 
+/* Tablet */
 @media (min-width: 768px) {
   .title-container {
     margin-bottom: 0;
+  }
+  .title-layer {
+    height: 10rem;
   }
   .title-container h2 {
     font-size: 9.6rem;
@@ -70,5 +74,27 @@
   .product h3 {
     margin-top: 1.5rem;
     margin-bottom: 2.4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1400px) {
+  .title-container h2 {
+    font-size: 15rem;
+  }
+  .products-container {
+    padding: 0 8.5rem;
+  }
+  .products-container {
+    flex-direction: row;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product h3,
+  .product p {
+    text-align: center;
   }
 }

@@ -65,9 +65,9 @@ h4 {
 }
 .container {
   /* padding: 0 2.4rem; */
-  margin-bottom: 12rem;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 144rem;
+  margin: 0 auto 12rem;
 }
 
 /* Tablet */

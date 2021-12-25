@@ -25,6 +25,11 @@ function Home() {
           src="./assets/home/tablet/image-hero-coffeepress.jpg"
           alt="coffeepress"
         />
+        <img
+          className={`${classes.hero} ${classes["hero-desktop"]}`}
+          src="./assets/home/desktop/image-hero-coffeepress.jpg"
+          alt="coffeepress"
+        />
       </div>
       <div className={classes["text-content"]}>
         <h1>Great coffee made simple.</h1>
