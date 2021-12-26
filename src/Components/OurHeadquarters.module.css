@@ -42,3 +42,17 @@
     margin-bottom: 2.1rem;
   }
 }
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 8.5rem;
+  }
+  .headquarters-container {
+    column-gap: 14rem;
+  }
+  .headquarter h3 {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+}

@@ -13,6 +13,9 @@
 .hero-tablet {
   display: none;
 }
+.hero-desktop {
+  display: none;
+}
 .text-content {
   position: relative;
   z-index: 5;
@@ -40,7 +43,8 @@
   border-radius: 0.8rem;
   margin-bottom: 4.8rem;
 }
-.commitment .tablet {
+.commitment .tablet,
+.commitment .desktop {
   display: none;
 }
 .commitment h2 {
@@ -67,7 +71,8 @@
   margin-top: -7.8rem;
   margin-bottom: 6.4rem;
 }
-.uncompromising-quality .tablet {
+.uncompromising-quality .tablet,
+.uncompromising-quality .desktop {
   display: none;
 }
 .uncompromising-quality h3 {
@@ -135,7 +140,7 @@
   .uncompromising-quality .tablet {
     display: initial;
   }
-  .uncompromising-quality img {
+  .uncompromising-quality .tablet {
     margin-top: -16rem;
   }
   .uncompromising-quality h3 {
@@ -144,5 +149,87 @@
   }
   .uncompromising-quality p {
     padding: 0 1.7rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero-tablet {
+    display: none;
+  }
+  .hero-desktop {
+    display: initial;
+  }
+  .text-content {
+    padding: 10rem 50% 0 5.8rem;
+  }
+  .commitment {
+    padding: 0 8.5rem;
+  }
+  .commitment .tablet {
+    display: none;
+  }
+  .commitment .desktop {
+    display: initial;
+    width: 40%;
+  }
+  .commitment {
+    align-items: center;
+  }
+  .commitment h2 {
+    margin-top: 0;
+    margin-bottom: 3.2rem;
+  }
+  .uncompromising-quality {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 7rem;
+    padding-top: 2rem;
+  }
+  .uncompromising-quality .tablet {
+    display: none;
+  }
+  .uncompromising-quality .desktop {
+    display: initial;
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .uncompromising-quality p {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 8rem;
+  }
+  .text-content {
+    padding: 13.7rem 75.9rem 0 8.5rem;
+    margin-bottom: 30.5rem;
+  }
+  .commitment {
+    column-gap: 12.5rem;
+    margin-bottom: 25.6rem;
+  }
+  .uncompromising-quality {
+    column-gap: 12.5rem;
+    padding: 0 8.5rem 8.8rem;
+  }
+  .commitment .desktop,
+  .uncompromising-quality .desktop {
+    width: 100%;
+  }
+  .text-content h1,
+  .commitment h2,
+  .uncompromising-quality h3 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  .text-content p,
+  .commitment p,
+  .uncompromising-quality p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
   }
 }

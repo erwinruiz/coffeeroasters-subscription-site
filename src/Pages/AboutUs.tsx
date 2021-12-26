@@ -15,6 +15,11 @@ function AboutUs() {
           src="./assets/about/tablet/image-hero-whitecup.jpg"
           alt="whitecup"
         />
+        <img
+          className={`${classes.hero} ${classes["hero-desktop"]}`}
+          src="./assets/about/desktop/image-hero-whitecup.jpg"
+          alt="whitecup"
+        />
       </div>
       <div className={classes["text-content"]}>
         <h1>About Us</h1>
@@ -36,6 +41,11 @@ function AboutUs() {
           src="./assets/about/tablet/image-commitment.jpg"
           alt="commitment"
         />
+        <img
+          className={classes.desktop}
+          src="./assets/about/desktop/image-commitment.jpg"
+          alt="commitment"
+        />
         <div>
           <h2>Our commitment</h2>
           <p>
@@ -54,17 +64,32 @@ function AboutUs() {
         </div>
       </div>
       <div className={classes["uncompromising-quality"]}>
-        <img className={classes.mobile} src="./assets/about/mobile/image-quality.jpg" alt="commitment" />
-        <img className={classes.tablet} src="./assets/about/tablet/image-quality.jpg" alt="commitment" />
-        <h3>Uncompromising quality</h3>
-        <p>
-          Although we work with growers who pay close attention to all stages of
-          harvest and processing, we employ, on our end, a rigorous quality
-          control program to avoid over-roasting or baking the coffee dry. Every
-          bag of coffee is tagged with a roast date and batch number. Our goal
-          is to roast consistent, user-friendly coffee, so that brewing is easy
-          and enjoyable.
-        </p>
+        <img
+          className={classes.mobile}
+          src="./assets/about/mobile/image-quality.jpg"
+          alt="commitment"
+        />
+        <img
+          className={classes.tablet}
+          src="./assets/about/tablet/image-quality.jpg"
+          alt="commitment"
+        />
+        <img
+          className={classes.desktop}
+          src="./assets/about/desktop/image-quality.jpg"
+          alt="commitment"
+        />
+        <div className={classes.text}>
+          <h3>Uncompromising quality</h3>
+          <p>
+            Although we work with growers who pay close attention to all stages
+            of harvest and processing, we employ, on our end, a rigorous quality
+            control program to avoid over-roasting or baking the coffee dry.
+            Every bag of coffee is tagged with a roast date and batch number.
+            Our goal is to roast consistent, user-friendly coffee, so that
+            brewing is easy and enjoyable.
+          </p>
+        </div>
       </div>
       <OurHeadquarters />
     </section>
