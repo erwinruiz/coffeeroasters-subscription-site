@@ -12,7 +12,8 @@
   position: absolute;
   z-index: 1;
 }
-.hero-tablet {
+.hero-tablet,
+.hero-desktop {
   display: none;
 }
 .text-content {
@@ -54,5 +55,38 @@
     font-size: 4.8rem;
     line-height: 4.8rem;
     margin-bottom: 2.4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero-tablet {
+    display: none;
+  }
+  .hero-desktop {
+    display: initial;
+  }
+  .text-content {
+    padding: 11rem 50% 0 8.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .text-content h2 {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .text-content p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+@media (min-width: 1440px) {
+  .first-subcontainer {
+    padding: 0 8rem;
+  }
+  .text-content {
+    padding: 13.4rem 69.5rem 0 8.5rem;
+    margin-bottom: 30.2rem;
   }
 }

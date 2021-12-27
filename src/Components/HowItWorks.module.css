@@ -96,6 +96,12 @@
 }
 
 /* Desktop */
+@media (min-width: 1024px) {
+  .dark-container {
+    margin: 0 2.4rem 10rem;
+    padding: 9.1rem 7rem 8rem;
+  }
+}
 @media (min-width: 1440px) {
   .container {
     padding: 0 8.5rem;
@@ -110,5 +116,20 @@
   .steps-container {
     column-gap: 9.5rem;
     margin-bottom: 6.4rem;
+  }
+  .step .title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+  .step .description {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+  .dark-container {
+    margin: 0 8rem 15.9rem;
+    padding: 9.1rem 15rem 10.7rem 8.5rem;
+  }
+  .dark-container .steps-container {
+    margin-bottom: 0;
   }
 }

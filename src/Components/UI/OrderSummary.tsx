@@ -36,9 +36,19 @@ function OrderSummary(props: OrderSummaryProps) {
           redeemed at the checkout.
         </p>
       </div>
-      <div>
-        <button onClick={checkoutHandler} className={classes.button}>
-          Checkout - $14.00 / mo
+      <div className={classes["button-container"]}>
+        <h3>$14.00/ mo</h3>
+        <button
+          onClick={checkoutHandler}
+          className={`${classes.button} ${classes["button-mobile"]}`}
+        >
+          Checkout - $14.00/ mo
+        </button>
+        <button
+          onClick={checkoutHandler}
+          className={`${classes.button} ${classes["button-tablet-desktop"]}`}
+        >
+          Checkout
         </button>
       </div>
     </div>

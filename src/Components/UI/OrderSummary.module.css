@@ -53,6 +53,12 @@
   cursor: pointer;
   background-color: var(--main-button-hover);
 }
+.button-container h3 {
+  display: none;
+}
+.button-tablet-desktop {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .container {
@@ -73,5 +79,21 @@
   }
   .text-order-summary {
     margin-bottom: 0.7rem;
+  }
+  .button-mobile {
+    display: none;
+  }
+  .button-container {
+    padding: 0 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .button-container h3 {
+    display: initial;
+  }
+  .button-tablet-desktop {
+    display: initial;
+    width: 21.7rem;
   }
 }

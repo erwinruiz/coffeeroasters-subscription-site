@@ -17,6 +17,11 @@ function Subscribe() {
             src="./assets/plan/tablet/image-hero-blackcup.jpg"
             alt="blackcup"
           />
+          <img
+            className={`${classes.hero} ${classes["hero-desktop"]}`}
+            src="./assets/plan/desktop/image-hero-blackcup.jpg"
+            alt="blackcup"
+          />
         </div>
         <div className={classes["text-content"]}>
           <h2>Create a plan</h2>
