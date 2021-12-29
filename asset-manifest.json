@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/coffeeroasters-subscription-site/static/css/main.e823cb2f.chunk.css",
+    "main.js": "/coffeeroasters-subscription-site/static/js/main.baed5d4e.chunk.js",
+    "main.js.map": "/coffeeroasters-subscription-site/static/js/main.baed5d4e.chunk.js.map",
+    "runtime-main.js": "/coffeeroasters-subscription-site/static/js/runtime-main.69320d8a.js",
+    "runtime-main.js.map": "/coffeeroasters-subscription-site/static/js/runtime-main.69320d8a.js.map",
+    "static/js/2.0ef2e40d.chunk.js": "/coffeeroasters-subscription-site/static/js/2.0ef2e40d.chunk.js",
+    "static/js/2.0ef2e40d.chunk.js.map": "/coffeeroasters-subscription-site/static/js/2.0ef2e40d.chunk.js.map",
+    "index.html": "/coffeeroasters-subscription-site/index.html",
+    "static/css/main.e823cb2f.chunk.css.map": "/coffeeroasters-subscription-site/static/css/main.e823cb2f.chunk.css.map",
+    "static/js/2.0ef2e40d.chunk.js.LICENSE.txt": "/coffeeroasters-subscription-site/static/js/2.0ef2e40d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69320d8a.js",
+    "static/js/2.0ef2e40d.chunk.js",
+    "static/css/main.e823cb2f.chunk.css",
+    "static/js/main.baed5d4e.chunk.js"
+  ]
+}
