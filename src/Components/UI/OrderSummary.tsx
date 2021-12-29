@@ -8,16 +8,22 @@ type OrderSummaryProps = {
   howMuch: string;
   grind: string;
   howOften: string;
+  isCapsuleSelected: boolean;
+  price: number;
 };
 
 function OrderSummary(props: OrderSummaryProps) {
   const { howDoYouDrink, typeOfCoffee, howMuch, grind, howOften } = props;
+
+  let { price } = props;
 
   const navigate = useNavigate();
 
   const checkoutHandler = () => {
     navigate("/");
   };
+  
+ 
 
   const content = (
     <div className={classes.container}>
@@ -37,12 +43,12 @@ function OrderSummary(props: OrderSummaryProps) {
         </p>
       </div>
       <div className={classes["button-container"]}>
-        <h3>$14.00/ mo</h3>
+        <h3>${price.toFixed(2)}/ mo</h3>
         <button
           onClick={checkoutHandler}
           className={`${classes.button} ${classes["button-mobile"]}`}
         >
-          Checkout - $14.00/ mo
+          Checkout - ${price.toFixed(2)}/ mo
         </button>
         <button
           onClick={checkoutHandler}

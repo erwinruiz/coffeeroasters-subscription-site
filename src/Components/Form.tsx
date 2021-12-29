@@ -32,6 +32,7 @@ const summaryInitialState = {
 };
 
 let isFormComplete = false;
+let isCapsuleSelected = false;
 
 function Form() {
   const [isQuestionOpen, setIsQuestionOpen] = useState<any>(
@@ -40,15 +41,75 @@ function Form() {
   const [isAnswerOpen, setIsAnswerOpen] = useState<any>(answersInitialState);
   const [summary, setSummary] = useState<any>(summaryInitialState);
   const [createPlan, setCreatePlan] = useState(false);
+  let selectedPrice: number = 0;
+
+  if (isCapsuleSelected) {
+    isFormComplete = Object.values(summary).every((value, i) => {
+      if (i + 1 === 4) {
+        return true;
+      }
+      return value !== null;
+    });
+  } else {
+    isFormComplete = Object.values(summary).every((value) => value !== null);
+  }
+
+  if (summary[3] && isFormComplete) {
+    const amount = summary[3].substring(0, summary[3].length - 1);
+    let price: number;
+
+    switch (summary[5]) {
+      case "Every week":
+        if (amount === "250") {
+          price = 7.2;
+        } else if (amount === "500") {
+          price = 13.0;
+        } else {
+          price = 22.0;
+        }
+        selectedPrice = price * 4;
+        break;
+      case "Every 2 weeks":
+        if (amount === "250") {
+          price = 9.6;
+        } else if (amount === "500") {
+          price = 17.5;
+        } else {
+          price = 32.0;
+        }
+        selectedPrice = price * 2;
+        break;
+      case "Every month":
+        if (amount === "250") {
+          price = 12.0;
+        } else if (amount === "500") {
+          price = 22.0;
+        } else {
+          price = 42.0;
+        }
+
+        selectedPrice = price;
+        break;
+    }
+  }
+
+  if (summary[1] === "Capsule") {
+    isCapsuleSelected = true;
+  } else {
+    isCapsuleSelected = false;
+  }
 
   const questionHandler = (questionId: number) => {
+    if (questionId === 4 && isCapsuleSelected) {
+      // If "Capsule" is selected for the first option
+      // The "Want us to grind them?" section should be disabled and not able to be opened
+      return;
+    }
     setIsQuestionOpen({
       ...isQuestionOpen,
       [questionId.toString()]: !isQuestionOpen[questionId],
     });
   };
-
-  isFormComplete = Object.values(summary).every((value) => value !== null);
 
   const createPlanHandler = (e: FormEvent) => {
     e.preventDefault();
@@ -60,6 +121,12 @@ function Form() {
     answerId: number,
     title: string
   ) => {
+    if (title === "Capsule") {
+      setIsQuestionOpen({
+        ...isQuestionOpen,
+        "4": false,
+      });
+    }
     setIsAnswerOpen({
       ...isAnswerOpen,
       [questionId.toString()]:
@@ -79,6 +146,7 @@ function Form() {
           questions={isQuestionOpen}
           answers={isAnswerOpen}
           onSectionHandler={(idSection: number) => questionHandler(idSection)}
+          isCapsuleSelected={isCapsuleSelected}
         />
       </div>
       <div>
@@ -97,7 +165,11 @@ function Form() {
                 >
                   <div
                     onClick={() => questionHandler(questionId)}
-                    className={classes["question-header"]}
+                    className={`${classes["question-header"]} ${
+                      isCapsuleSelected
+                        ? questionId === 4 && classes["question-disabled"]
+                        : ""
+                    }`}
                   >
                     <h2>{title}</h2>
                     <svg
@@ -117,6 +189,49 @@ function Form() {
                     <div className={classes["answers-container"]}>
                       {options.map((answer) => {
                         const { title, description, id } = answer;
+                        let price: number | null = null;
+
+                        if (summary[3] && questionId === 5) {
+                          let amount = summary[3].substring(
+                            0,
+                            summary[3].length - 1
+                          );
+
+                          switch (id) {
+                            case 1:
+                              if (amount === "250") {
+                                price = 7.2;
+                              } else if (amount === "500") {
+                                price = 13.0;
+                              } else {
+                                price = 22.0;
+                              }
+                              break;
+
+                            case 2:
+                              if (amount === "250") {
+                                price = 9.6;
+                              } else if (amount === "500") {
+                                price = 17.5;
+                              } else {
+                                price = 32.0;
+                              }
+                              break;
+
+                            case 3:
+                              if (amount === "250") {
+                                price = 12.0;
+                              } else if (amount === "500") {
+                                price = 22.0;
+                              } else {
+                                price = 42.0;
+                              }
+                              break;
+
+                            default:
+                          }
+                        }
+
                         return (
                           <div
                             key={id}
@@ -128,7 +243,14 @@ function Form() {
                             onClick={() => answerHandler(questionId, id, title)}
                           >
                             <h3>{title}</h3>
-                            <p>{description}</p>
+                            {!price && (
+                              <p>Select the amount of grams to see the price</p>
+                            )}
+                            {price && (
+                              <p>
+                                ${price.toFixed(2)} {description}
+                              </p>
+                            )}
                           </div>
                         );
                       })}
@@ -141,11 +263,13 @@ function Form() {
           <div className={classes["order-summary"]}>
             <p className={classes.title}>Order Summary</p>
             <p className={classes.description}>
-              “I drink my coffee as <span>{summary["1"] || "_____"}</span>, with
-              a <span>{summary["2"] || "_____"}</span> type of bean.{" "}
-              <span>{summary["3"] || "_____"}</span> ground ala{" "}
-              <span>{summary["4"] || "_____"}</span>, sent to me{" "}
-              <span>{summary["5"] || "_____"}</span>.”
+              “I drink my coffee {isCapsuleSelected ? "using" : "as"}{" "}
+              <span>{summary["1"] || "_____"}</span>, with a{" "}
+              <span>{summary["2"] || "_____"}</span> type of bean.{" "}
+              <span>{summary["3"] || "_____"}</span>{" "}
+              {isCapsuleSelected ? "" : "ground ala"}{" "}
+              {!isCapsuleSelected && <span>{summary["4"] || "_____"}</span>},
+              sent to me <span>{summary["5"] || "_____"}</span>.”
             </p>
           </div>
           <div className={classes["button-container"]}>
@@ -165,6 +289,8 @@ function Form() {
               howMuch={summary["3"]}
               grind={summary["4"]}
               howOften={summary["5"]}
+              isCapsuleSelected={isCapsuleSelected}
+              price={selectedPrice}
             />
           </>
         )}

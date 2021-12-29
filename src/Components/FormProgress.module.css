@@ -24,7 +24,13 @@
 .section-completed h3 span {
   color: var(--dark-cyan);
 }
-.section:hover {
+.section:hover:not(.section-disabled) {
   opacity: 0.6;
   cursor: pointer;
+}
+.section-disabled {
+  opacity: 0.2;
+}
+.section-disabled:hover {
+  cursor: not-allowed;
 }

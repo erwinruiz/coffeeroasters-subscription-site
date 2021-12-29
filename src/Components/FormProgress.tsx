@@ -5,10 +5,11 @@ type FormProgressProps = {
   questions: any;
   answers: any;
   onSectionHandler: (idSection: number) => void;
+  isCapsuleSelected: boolean;
 };
 
 function FormProgress(props: FormProgressProps) {
-  const { questions, answers, onSectionHandler } = props;
+  const { questions, answers, onSectionHandler, isCapsuleSelected } = props;
 
   const sectionHandler = (idSection: number) => {
     onSectionHandler(idSection);
@@ -19,13 +20,17 @@ function FormProgress(props: FormProgressProps) {
       {FormSections.map((section, id) => {
         const isSelected = questions[id + 1];
         const isAnswerSelected = answers[id + 1] !== null ? true : false;
+        const grindDisabled = isCapsuleSelected && section.number === "04";
+
         return (
           <div
             key={id}
             className={`${classes.section} ${
               isSelected ? classes["section-active"] : ""
             }
-            ${isAnswerSelected ? classes["section-completed"] : ""}`}
+            ${isAnswerSelected ? classes["section-completed"] : ""}
+            ${grindDisabled ? classes["section-disabled"] : ""}
+            `}
             onClick={() => sectionHandler(id + 1)}
           >
             <h3>

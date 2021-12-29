@@ -100,17 +100,17 @@ const questions = [
       {
         id: 1,
         title: "Every week",
-        description: "$7.20 per shipment. Includes free first-class shipping.",
+        description: "per shipment. Includes free first-class shipping.",
       },
       {
         id: 2,
         title: "Every 2 weeks",
-        description: "$9.60 per shipment. Includes free priority shipping.",
+        description: "per shipment. Includes free priority shipping.",
       },
       {
         id: 3,
         title: "Every month",
-        description: "$12.00 per shipment. Includes free priority shipping.",
+        description: "per shipment. Includes free priority shipping.",
       },
     ],
   },
