@@ -2,7 +2,7 @@ import classes from "./Header.module.css";
 import { useState, Fragment } from "react";
 import MobileMenu from "./UI/MobileMenu";
 import Backdrop from "./UI/Backdrop";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
@@ -59,13 +59,13 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <a href="/">HOME</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/about-us">ABOUT US</a>
+              <Link to="/about-us">About us</Link>
             </li>
             <li>
-              <a href="/subscribe">Create your plan</a>
+              <Link to="/subscribe">Create your plan</Link>
             </li>
           </ul>
         </nav>
