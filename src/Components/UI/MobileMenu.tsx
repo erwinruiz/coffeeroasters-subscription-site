@@ -10,17 +10,17 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
     <nav className={classes.nav}>
       <ul>
         <li>
-          <Link onClick={closeMenu} to="/">
+          <Link onClick={closeMenu} to="/" aria-label="Home page">
             Home
           </Link>
         </li>
         <li>
-          <Link onClick={closeMenu} to="/about-us">
+          <Link onClick={closeMenu} to="/about-us" aria-label="About us page">
             About Us
           </Link>
         </li>
         <li>
-          <Link onClick={closeMenu} to="/subscribe">
+          <Link onClick={closeMenu} to="/subscribe" aria-label="Subscribe page">
             Create Your Plan
           </Link>
         </li>

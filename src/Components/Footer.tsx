@@ -12,13 +12,13 @@ function Footer() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" aria-label="Home page">Home</Link>
           </li>
           <li>
-            <Link to="/about-us">About us</Link>
+            <Link to="/about-us" aria-label="About us page">About us</Link>
           </li>
           <li>
-            <Link to="/subscribe">Create your plan</Link>
+            <Link to="/subscribe" aria-label="Subscribe page">Create your plan</Link>
           </li>
         </ul>
       </nav>
